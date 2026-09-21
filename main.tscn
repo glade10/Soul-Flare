@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://c446e4t76n7sf"]
+
+[ext_resource type="Script" uid="uid://jgt3moup7vxo" path="res://player.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://ct8n50jc8loo7" path="res://save_data.gd" id="1_7mycd"]
+[ext_resource type="Texture2D" uid="uid://bpwyj40x1o3t6" path="res://SouflarePlayer Idle.png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://d2ilfp2cd56ed" path="res://SouflarePlayer WalkFowards.png" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://d07rmxjcs7vgu" path="res://BSP.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://bnph4rvfo83yg" path="res://new_game.gd" id="5_lquwl"]
+[ext_resource type="Theme" uid="uid://b6ni8cjr3giv3" path="res://MenuTheme.tres" id="6_272bh"]
+[ext_resource type="Script" uid="uid://bwy8oci6jj6dw" path="res://menu.gd" id="7_5vw27"]
+[ext_resource type="Script" uid="uid://b506pgf5t6cbf" path="res://quit.gd" id="9_kek77"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(8, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
+atlas = ExtResource("2_h2yge")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mycd"]
+atlas = ExtResource("2_h2yge")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_272bh"]
+atlas = ExtResource("3_1bvp3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vw27"]
+atlas = ExtResource("3_1bvp3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kek77"]
+atlas = ExtResource("3_1bvp3")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c57u"]
+atlas = ExtResource("3_1bvp3")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gyc6d"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_lquwl")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_7mycd")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_272bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vw27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kek77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c57u")
+}],
+"loop": 1,
+"name": &"WalkFowards",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1189741921]
+
+[node name="saveData" type="Node" parent="." unique_id=2145756467]
+script = ExtResource("1_7mycd")
+
+[node name="BSP" type="Node" parent="." unique_id=1872153336]
+script = ExtResource("4_1bvp3")
+
+[node name="Player" type="Area2D" parent="." unique_id=709270919 groups=["Persist"]]
+visible = false
+position = Vector2(40, 60)
+scale = Vector2(8, 8)
+script = ExtResource("1_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2054945801]
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=190562583]
+sprite_frames = SubResource("SpriteFrames_gyc6d")
+animation = &"WalkFowards"
+
+[node name="Menu" type="CenterContainer" parent="." unique_id=1562657089]
+offset_right = 209.0
+offset_bottom = 101.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 170)
+offset_transform_visual_only = false
+mouse_filter = 0
+theme = ExtResource("6_272bh")
+script = ExtResource("7_5vw27")
+
+[node name="NewGame" type="Button" parent="Menu" unique_id=1232418241]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_visual_only = false
+text = "New Game"
+script = ExtResource("5_lquwl")
+
+[node name="LoadGame" type="Button" parent="Menu" unique_id=1875720279]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 100)
+offset_transform_visual_only = false
+text = "Load Game"
+
+[node name="Settings" type="Button" parent="Menu" unique_id=364597800]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 200)
+offset_transform_visual_only = false
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Menu" unique_id=1729081024]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 300)
+offset_transform_visual_only = false
+text = "Quit
+"
+script = ExtResource("9_kek77")
+
+[node name="SelectSave" type="CenterContainer" parent="." unique_id=1077018387]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Save1" type="Button" parent="SelectSave" unique_id=388890256]
+layout_mode = 2
+
+[node name="Save2" type="Button" parent="SelectSave" unique_id=1370281328]
+layout_mode = 2
+
+[node name="Save3" type="Button" parent="SelectSave" unique_id=1055623690]
+layout_mode = 2
+
+[connection signal="newGame" from="Menu/NewGame" to="Menu" method="_on_new_game"]
+[connection signal="pressed" from="Menu/NewGame" to="Menu/NewGame" method="_on_pressed"]
+[connection signal="pressed" from="Menu/Quit" to="Menu/Quit" method="_on_pressed"]
