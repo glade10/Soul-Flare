@@ -132,15 +132,19 @@ script = ExtResource("9_kek77")
 [node name="SelectSave" type="CenterContainer" parent="." unique_id=1077018387]
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("6_272bh")
 
 [node name="Save1" type="Button" parent="SelectSave" unique_id=388890256]
 layout_mode = 2
+text = "Save 1"
 
 [node name="Save2" type="Button" parent="SelectSave" unique_id=1370281328]
 layout_mode = 2
+text = "Save 2"
 
 [node name="Save3" type="Button" parent="SelectSave" unique_id=1055623690]
 layout_mode = 2
+text = "Save 3"
 
 [connection signal="newGame" from="Menu/NewGame" to="Menu" method="_on_new_game"]
 [connection signal="pressed" from="Menu/NewGame" to="Menu/NewGame" method="_on_pressed"]
