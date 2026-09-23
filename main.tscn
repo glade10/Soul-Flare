@@ -5,10 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bpwyj40x1o3t6" path="res://SouflarePlayer Idle.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://d2ilfp2cd56ed" path="res://SouflarePlayer WalkFowards.png" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://d07rmxjcs7vgu" path="res://BSP.gd" id="4_1bvp3"]
-[ext_resource type="Script" uid="uid://bnph4rvfo83yg" path="res://new_game.gd" id="5_lquwl"]
 [ext_resource type="Theme" uid="uid://b6ni8cjr3giv3" path="res://MenuTheme.tres" id="6_272bh"]
 [ext_resource type="Script" uid="uid://bwy8oci6jj6dw" path="res://menu.gd" id="7_5vw27"]
-[ext_resource type="Script" uid="uid://b506pgf5t6cbf" path="res://quit.gd" id="9_kek77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(8, 22)
@@ -89,63 +87,64 @@ shape = SubResource("RectangleShape2D_0xm2m")
 sprite_frames = SubResource("SpriteFrames_gyc6d")
 animation = &"WalkFowards"
 
-[node name="Menu" type="CenterContainer" parent="." unique_id=1562657089]
+[node name="Control" type="Control" parent="." unique_id=1211627837]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 170)
+offset_transform_visual_only = false
+
+[node name="Menu" type="CenterContainer" parent="Control" unique_id=1562657089]
+layout_mode = 0
 offset_right = 209.0
 offset_bottom = 101.0
-offset_transform_enabled = true
 offset_transform_position = Vector2(0, 170)
 offset_transform_visual_only = false
 mouse_filter = 0
 theme = ExtResource("6_272bh")
 script = ExtResource("7_5vw27")
 
-[node name="NewGame" type="Button" parent="Menu" unique_id=1232418241]
+[node name="NewGame" type="TextureButton" parent="Control/Menu" unique_id=1297135554]
 layout_mode = 2
 offset_transform_enabled = true
-offset_transform_visual_only = false
-text = "New Game"
-script = ExtResource("5_lquwl")
 
-[node name="LoadGame" type="Button" parent="Menu" unique_id=1875720279]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Menu/NewGame" unique_id=1953879419]
+
+[node name="LoadGame" type="TextureButton" parent="Control/Menu" unique_id=1268864280]
 layout_mode = 2
-offset_transform_enabled = true
-offset_transform_position = Vector2(0, 100)
-offset_transform_visual_only = false
-text = "Load Game"
 
-[node name="Settings" type="Button" parent="Menu" unique_id=364597800]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Menu/LoadGame" unique_id=963238968]
+
+[node name="Settings" type="TextureButton" parent="Control/Menu" unique_id=29237069]
 layout_mode = 2
-offset_transform_enabled = true
-offset_transform_position = Vector2(0, 200)
-offset_transform_visual_only = false
-text = "Settings"
 
-[node name="Quit" type="Button" parent="Menu" unique_id=1729081024]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Menu/Settings" unique_id=11616067]
+
+[node name="Quit" type="TextureButton" parent="Control/Menu" unique_id=1317521458]
 layout_mode = 2
-offset_transform_enabled = true
-offset_transform_position = Vector2(0, 300)
-offset_transform_visual_only = false
-text = "Quit
-"
-script = ExtResource("9_kek77")
 
-[node name="SelectSave" type="CenterContainer" parent="." unique_id=1077018387]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Menu/Quit" unique_id=646166545]
+
+[node name="SelectSave" type="CenterContainer" parent="Control" unique_id=1077018387]
+visible = false
+layout_mode = 0
+offset_right = 129.0
+offset_bottom = 101.0
 theme = ExtResource("6_272bh")
 
-[node name="Save1" type="Button" parent="SelectSave" unique_id=388890256]
+[node name="Save1" type="TextureButton" parent="Control/SelectSave" unique_id=1949260250]
 layout_mode = 2
-text = "Save 1"
 
-[node name="Save2" type="Button" parent="SelectSave" unique_id=1370281328]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/SelectSave/Save1" unique_id=718715925]
+
+[node name="Save2" type="TextureButton" parent="Control/SelectSave" unique_id=1175493035]
 layout_mode = 2
-text = "Save 2"
 
-[node name="Save3" type="Button" parent="SelectSave" unique_id=1055623690]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/SelectSave/Save2" unique_id=1430121136]
+
+[node name="Save3" type="TextureButton" parent="Control/SelectSave" unique_id=731400638]
 layout_mode = 2
-text = "Save 3"
 
-[connection signal="newGame" from="Menu/NewGame" to="Menu" method="_on_new_game"]
-[connection signal="pressed" from="Menu/NewGame" to="Menu/NewGame" method="_on_pressed"]
-[connection signal="pressed" from="Menu/Quit" to="Menu/Quit" method="_on_pressed"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/SelectSave/Save3" unique_id=179301047]
