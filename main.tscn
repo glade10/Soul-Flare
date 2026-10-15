@@ -85,3 +85,5 @@ sprite_frames = SubResource("SpriteFrames_gyc6d")
 animation = &"WalkFowards"
 
 [node name="UI" parent="." unique_id=449575046 instance=ExtResource("1_272bh")]
+offset_right = 0.0
+offset_bottom = 0.0

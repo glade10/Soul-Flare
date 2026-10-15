@@ -16,7 +16,7 @@ offset_bottom = 40.0
 
 [node name="Menu" type="CenterContainer" parent="." unique_id=537028529]
 layout_mode = 0
-offset_right = 38.0
+offset_right = 136.5
 offset_bottom = 7.0
 script = ExtResource("2_27c8x")
 
@@ -86,4 +86,5 @@ layout_mode = 2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SelectSave/Save3" unique_id=1929834398]
 
 [connection signal="mouse_entered" from="Menu/NewGame" to="Menu/NewGame" method="_on_mouse_entered"]
+[connection signal="newGame" from="Menu/NewGame" to="Menu" method="_on_new_game"]
 [connection signal="pressed" from="Menu/NewGame" to="Menu/NewGame" method="_on_pressed"]
