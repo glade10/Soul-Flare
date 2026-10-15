@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bvlokybksnp2h"]
+
+[ext_resource type="Theme" uid="uid://b6ni8cjr3giv3" path="res://MenuTheme.tres" id="1_2n5f6"]
+[ext_resource type="Script" uid="uid://bwy8oci6jj6dw" path="res://menu.gd" id="2_27c8x"]
+[ext_resource type="Texture2D" uid="uid://b3hda6k78b3hp" path="res://Button Textures/sprite_0.png" id="3_i1vam"]
+[ext_resource type="Script" uid="uid://bnph4rvfo83yg" path="res://new_game.gd" id="4_q77pa"]
+[ext_resource type="Texture2D" uid="uid://bv1pqft55c5u1" path="res://Button Textures/sprite_1.png" id="5_n8582"]
+[ext_resource type="Texture2D" uid="uid://dm8qaa7v8x5du" path="res://Button Textures/sprite_2.png" id="6_c6dx3"]
+[ext_resource type="Texture2D" uid="uid://3vd0te20bjy8" path="res://Button Textures/sprite_3.png" id="7_jqn02"]
+
+[node name="Control" type="Control" unique_id=449575046]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Menu" type="CenterContainer" parent="." unique_id=962303133]
+layout_mode = 0
+offset_right = 38.0
+offset_bottom = 7.0
+scale = Vector2(8, 8)
+offset_transform_visual_only = false
+mouse_filter = 0
+theme = ExtResource("1_2n5f6")
+script = ExtResource("2_27c8x")
+
+[node name="NewGame" type="TextureButton" parent="Menu" unique_id=1313187473]
+layout_mode = 2
+texture_normal = ExtResource("3_i1vam")
+script = ExtResource("4_q77pa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/NewGame" unique_id=2141157885]
+
+[node name="LoadGame" type="TextureButton" parent="Menu" unique_id=538891246]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 9)
+offset_transform_visual_only = false
+texture_normal = ExtResource("5_n8582")
+stretch_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/LoadGame" unique_id=1716460863]
+
+[node name="Settings" type="TextureButton" parent="Menu" unique_id=1845713975]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 18)
+offset_transform_visual_only = false
+texture_normal = ExtResource("6_c6dx3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/Settings" unique_id=111073936]
+
+[node name="Quit" type="TextureButton" parent="Menu" unique_id=129255665]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 27)
+offset_transform_visual_only = false
+texture_normal = ExtResource("7_jqn02")
+texture_pressed = ExtResource("3_i1vam")
+texture_hover = ExtResource("3_i1vam")
+texture_disabled = ExtResource("3_i1vam")
+texture_focused = ExtResource("3_i1vam")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/Quit" unique_id=656258059]
+
+[node name="SelectSave" type="CenterContainer" parent="." unique_id=733882675]
+visible = false
+layout_mode = 0
+offset_right = 129.0
+offset_bottom = 101.0
+theme = ExtResource("1_2n5f6")
+
+[node name="Save1" type="TextureButton" parent="SelectSave" unique_id=792114321]
+layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SelectSave/Save1" unique_id=2106905915]
+
+[node name="Save2" type="TextureButton" parent="SelectSave" unique_id=423674230]
+layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SelectSave/Save2" unique_id=1892577013]
+
+[node name="Save3" type="TextureButton" parent="SelectSave" unique_id=333330250]
+layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SelectSave/Save3" unique_id=1929834398]
+
+[connection signal="mouse_entered" from="Menu/NewGame" to="Menu/NewGame" method="_on_mouse_entered"]
+[connection signal="pressed" from="Menu/NewGame" to="Menu/NewGame" method="_on_pressed"]

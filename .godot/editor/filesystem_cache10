@@ -1,9 +1,10 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1790285406
+::res://::1792011214
 BSP.gd::GDScript::8981098070620414420::1790108543::0::1::::BSP<>Node<><>0<>1<><>::
+Buttons.png::CompressedTexture2D::3299090012012899808::1792010620::1792010669::1::::<><><>0<>0<>1ddd1e3d22cef2e6b0cff65d73c93f2f<>res://.godot/imported/Buttons.png-18d4ed944496eff989a888ab863e3642.ctex::
 DrawBSP.gd::GDScript::6810509526959687365::1790108543::0::1::::<>Node2D<><>0<>1<><>::
 icon.svg::CompressedTexture2D::1101702879845802974::1790108543::1790108581::1::::<><><>0<>0<>67dc87df21ffb158002ee27c8ed2ac5d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-main.tscn::PackedScene::6870075711732601345::1790193931::0::1::::<><><>0<>0<><>::uid://jgt3moup7vxo::::res://player.gd<>uid://ct8n50jc8loo7::::res://save_data.gd<>uid://bpwyj40x1o3t6::::res://SouflarePlayer Idle.png<>uid://d2ilfp2cd56ed::::res://SouflarePlayer WalkFowards.png<>uid://d07rmxjcs7vgu::::res://BSP.gd<>uid://b6ni8cjr3giv3::::res://MenuTheme.tres<>uid://bwy8oci6jj6dw::::res://menu.gd
+main.tscn::PackedScene::6870075711732601345::1792011214::0::1::::<><><>0<>0<><>::uid://jgt3moup7vxo::::res://player.gd<>uid://ct8n50jc8loo7::::res://save_data.gd<>uid://bpwyj40x1o3t6::::res://SouflarePlayer Idle.png<>uid://d2ilfp2cd56ed::::res://SouflarePlayer WalkFowards.png<>uid://d07rmxjcs7vgu::::res://BSP.gd<>uid://b6ni8cjr3giv3::::res://MenuTheme.tres<>uid://bwy8oci6jj6dw::::res://menu.gd<>uid://b3hda6k78b3hp::::res://Button Textures/sprite_0.png<>uid://bv1pqft55c5u1::::res://Button Textures/sprite_1.png<>uid://dm8qaa7v8x5du::::res://Button Textures/sprite_2.png<>uid://3vd0te20bjy8::::res://Button Textures/sprite_3.png
 menu.gd::GDScript::3982149090529260464::1790108543::0::1::::<>CenterContainer<><>0<>1<><>::
 MenuTheme.tres::Theme::4589656534175880790::1790108543::0::1::::<><><>0<>0<><>::uid://pkycplowwmnd::::res://Aguafina_Script/AguafinaScript-Regular.ttf
 new_game.gd::GDScript::3330319049856087150::1790108543::0::1::::<>Button<><>0<>0<><>::
@@ -15,3 +16,8 @@ SouflarePlayer WalkFowards.png::CompressedTexture2D::9071553496884677671::179010
 ::res://Aguafina_Script/::1790108581
 AguafinaScript-Regular.ttf::FontFile::1074938017034763517::1790108543::1790108581::1::::<><><>0<>0<>8ea82d5fc67d71c31428a8246e56111f<>res://.godot/imported/AguafinaScript-Regular.ttf-4d5e028d72038e31042dec9e76c7fa3e.fontdata::
 OFL.txt::TextFile::-1::1790108543::0::1::::<><><>0<>0<><>::
+::res://Button Textures/::1792011347
+sprite_0.png::CompressedTexture2D::4366342745984728837::1792011347::1792011359::1::::<><><>0<>0<>805926ea4bd9bfa15ddc0700c167e56a<>res://.godot/imported/sprite_0.png-cb55374adeb9d0f329893c4b2545771d.ctex::
+sprite_1.png::CompressedTexture2D::3914999842662612010::1792011347::1792011359::1::::<><><>0<>0<>0770d1ae833dfd7ba444b6f62e46eff0<>res://.godot/imported/sprite_1.png-f1a0ee24a3ccabef55d63289fc5041a0.ctex::
+sprite_2.png::CompressedTexture2D::8070624162936850906::1792011347::1792011359::1::::<><><>0<>0<>ecaf8182a6a53d708abdcb2aa5a52046<>res://.godot/imported/sprite_2.png-f6e78fa1586ec736d0c397496aefef08.ctex::
+sprite_3.png::CompressedTexture2D::2008867355909169645::1792011347::1792011359::1::::<><><>0<>0<>481c98fe04487ab6a6dec7668335e517<>res://.godot/imported/sprite_3.png-9504c31d2f8e70733893a037949552a3.ctex::

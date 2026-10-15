@@ -27,10 +27,5 @@ func save_game(save):
 		saveFile.store_line(jsonString)
 	saveFile.close()
 
-
-func _on_quit_pressed() -> void:
-	pass # Replace with function body.
-
-
 func _on_new_game() -> void:
-	pass # Replace with function body.
+	pass # Replace with function body.s

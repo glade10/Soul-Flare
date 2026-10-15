@@ -14,3 +14,4 @@ func _process(delta: float) -> void:
 
 func _on_new_game() -> void:
 	visible = false
+	
