@@ -1,3 +1,4 @@
+@tool
 extends TextureButton
 signal newGame
 
@@ -11,7 +12,3 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	newGame.emit()
-
-
-func _on_mouse_entered() -> void:
-	print("You're hovering over me!")

@@ -85,6 +85,5 @@ layout_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SelectSave/Save3" unique_id=1929834398]
 
-[connection signal="mouse_entered" from="Menu/NewGame" to="Menu/NewGame" method="_on_mouse_entered"]
 [connection signal="newGame" from="Menu/NewGame" to="Menu" method="_on_new_game"]
 [connection signal="pressed" from="Menu/NewGame" to="Menu/NewGame" method="_on_pressed"]
