@@ -7,6 +7,7 @@ func _ready() -> void:
 	var window = get_viewport_rect().size
 	self.size.x = window.x
 	visible = true
+	print(size.x, " ", get_viewport_rect().size.x)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

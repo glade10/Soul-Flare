@@ -63,6 +63,9 @@ texture_focused = ExtResource("3_i1vam")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/Quit" unique_id=656258059]
 
+[node name="Button" type="Button" parent="Menu" unique_id=472721820]
+layout_mode = 2
+
 [node name="SelectSave" type="CenterContainer" parent="." unique_id=733882675]
 visible = false
 layout_mode = 0
