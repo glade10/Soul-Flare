@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://jgt3moup7vxo" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://ct8n50jc8loo7" path="res://save_data.gd" id="1_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bvlokybksnp2h" path="res://UI.tscn" id="1_272bh"]
 [ext_resource type="Texture2D" uid="uid://bpwyj40x1o3t6" path="res://SouflarePlayer Idle.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://d2ilfp2cd56ed" path="res://SouflarePlayer WalkFowards.png" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://d07rmxjcs7vgu" path="res://BSP.gd" id="4_1bvp3"]
@@ -65,6 +66,7 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D" unique_id=1189741921]
+scale = Vector2(8, 8)
 
 [node name="saveData" type="Node" parent="." unique_id=2145756467]
 script = ExtResource("1_7mycd")
@@ -73,8 +75,6 @@ script = ExtResource("1_7mycd")
 script = ExtResource("4_1bvp3")
 
 [node name="Player" type="Area2D" parent="." unique_id=709270919 groups=["Persist"]]
-position = Vector2(40, 60)
-scale = Vector2(8, 8)
 script = ExtResource("1_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2054945801]
@@ -83,3 +83,5 @@ shape = SubResource("RectangleShape2D_0xm2m")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=190562583]
 sprite_frames = SubResource("SpriteFrames_gyc6d")
 animation = &"WalkFowards"
+
+[node name="UI" parent="." unique_id=449575046 instance=ExtResource("1_272bh")]

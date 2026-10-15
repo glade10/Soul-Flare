@@ -14,24 +14,24 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Menu" type="CenterContainer" parent="." unique_id=962303133]
+[node name="Menu" type="CenterContainer" parent="." unique_id=537028529]
 layout_mode = 0
 offset_right = 38.0
 offset_bottom = 7.0
-scale = Vector2(8, 8)
-offset_transform_visual_only = false
-mouse_filter = 0
-theme = ExtResource("1_2n5f6")
 script = ExtResource("2_27c8x")
 
-[node name="NewGame" type="TextureButton" parent="Menu" unique_id=1313187473]
+[node name="NewGame" type="TextureButton" parent="Menu" unique_id=1903660059]
 layout_mode = 2
 texture_normal = ExtResource("3_i1vam")
+texture_pressed = ExtResource("3_i1vam")
+texture_hover = ExtResource("3_i1vam")
+texture_disabled = ExtResource("3_i1vam")
+texture_focused = ExtResource("3_i1vam")
 script = ExtResource("4_q77pa")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/NewGame" unique_id=2141157885]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/NewGame" unique_id=458277599]
 
-[node name="LoadGame" type="TextureButton" parent="Menu" unique_id=538891246]
+[node name="LoadGame" type="TextureButton" parent="Menu" unique_id=902179897]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 9)
@@ -39,18 +39,18 @@ offset_transform_visual_only = false
 texture_normal = ExtResource("5_n8582")
 stretch_mode = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/LoadGame" unique_id=1716460863]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/LoadGame" unique_id=1655564440]
 
-[node name="Settings" type="TextureButton" parent="Menu" unique_id=1845713975]
+[node name="Settings" type="TextureButton" parent="Menu" unique_id=838709965]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 18)
 offset_transform_visual_only = false
 texture_normal = ExtResource("6_c6dx3")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/Settings" unique_id=111073936]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/Settings" unique_id=1253909429]
 
-[node name="Quit" type="TextureButton" parent="Menu" unique_id=129255665]
+[node name="Quit" type="TextureButton" parent="Menu" unique_id=78376935]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 27)
@@ -61,10 +61,7 @@ texture_hover = ExtResource("3_i1vam")
 texture_disabled = ExtResource("3_i1vam")
 texture_focused = ExtResource("3_i1vam")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/Quit" unique_id=656258059]
-
-[node name="Button" type="Button" parent="Menu" unique_id=472721820]
-layout_mode = 2
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/Quit" unique_id=1043414890]
 
 [node name="SelectSave" type="CenterContainer" parent="." unique_id=733882675]
 visible = false
