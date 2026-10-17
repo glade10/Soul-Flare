@@ -1,12 +1,9 @@
-extends Button
+extends TextureButton
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
-	print("Button exists!")
-	print("Position: ", position)
-	print("Size: ", size)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -15,4 +12,5 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	print("quit")
+	await Fade.fade_out().finished
 	get_tree().quit()

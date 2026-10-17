@@ -11,4 +11,13 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
+	$AnimatedSprite2D.speed_scale = 8
+	$AnimatedSprite2D.play()
+	$AnimatedSprite2D.animation_looped.connect(_on_animation_finished)
+
+
+func _on_animation_finished() -> void:
+	$AnimatedSprite2D.stop()
+	await Fade.fade_out().finished
 	newGame.emit()
+	await Fade.fade_in().finished
