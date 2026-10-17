@@ -8,9 +8,10 @@ func _ready() -> void:
 func new_game(save):
 	if !FileAccess.file_exists("user://soulflare%s.save" % save):
 		var SaveFile = FileAccess.open("user://soulflare%s.save" % save,FileAccess.WRITE)
+		SaveFile.store_string("Hello, Godot!")
 		SaveFile.close()
 func save_game(save):
-	var saveFile = FileAccess.open("user://soulflare%s.save" % save, FileAccess.WRITE)
+	var saveFile = FileAccess.open("user://Save Files/soulflare%s.save" % save, FileAccess.WRITE)
 	if !saveFile:
 		print("Failed to open save file %s" % save)
 		return
@@ -20,7 +21,7 @@ func save_game(save):
 			print("Persistent node '%s' is not an instanced scene; skipped " % node.name)
 			continue
 		if !node.has_method("save"):
-			print("Persistent node %s can't be saved" % node.name)
+			print("Persistent node '%s' can't be saved" % node.name)
 			continue
 		var nodeData = node.call("save")
 		var jsonString = JSON.stringify(nodeData)
@@ -28,4 +29,5 @@ func save_game(save):
 	saveFile.close()
 
 func _on_new_game() -> void:
-	pass # Replace with function body.s
+	print("Hello, Godot!")
+	new_game(1);
